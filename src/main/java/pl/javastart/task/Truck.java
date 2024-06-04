@@ -10,12 +10,13 @@ public class Truck extends Car {
         this.load = load;
     }
 
-    public double getLoad() {
-        return load;
+    public double vehicleRange() {
+        return getFuel() / (getAverageFuelConsumption() / 100);
     }
 
-    public void setLoad(double load) {
-        this.load = load;
+    @Override
+    public void acTurnOn() {
+        setAcIsOn(true);
     }
 
     @Override

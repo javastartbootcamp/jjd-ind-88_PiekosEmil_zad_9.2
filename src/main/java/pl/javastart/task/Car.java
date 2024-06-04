@@ -17,6 +17,10 @@ public class Car extends Vehicle {
         this.acIsOn = acIsOn;
     }
 
+    public double vehicleRange() {
+        return getFuel() / (getAverageFuelConsumption() / 100);
+    }
+
     @Override
     public double getAverageFuelConsumption() {
         if (acIsOn) {
@@ -25,7 +29,6 @@ public class Car extends Vehicle {
         return super.getAverageFuelConsumption();
     }
 
-    @Override
     public void acTurnOn() {
         setAcIsOn(true);
     }

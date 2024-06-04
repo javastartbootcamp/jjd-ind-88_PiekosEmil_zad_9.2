@@ -1,7 +1,7 @@
 package pl.javastart.task;
 
 public class VehicleWarehouse {
-    private Vehicle[] vehicles = new Vehicle[5];
+    private Car[] vehicles = new Car[5];
 
     public VehicleWarehouse() {
         vehicles[0] = new Car("Volvo", 50, 7, false);
@@ -12,22 +12,22 @@ public class VehicleWarehouse {
     }
 
     public void vehicleInfo() {
-        for (Vehicle vehicle : vehicles) {
+        for (Car vehicle : vehicles) {
             String info = vehicle.vehicleInfo();
             System.out.println(info);
         }
     }
 
     public void achievableRange() {
-        for (Vehicle vehicle : vehicles) {
-            double rangeInfo = vehicle.getFuel() / (vehicle.getAverageFuelConsumption() / 100);
-            System.out.printf("Zasięg pojazdu %s %.2fkm\n", vehicle.getName(), rangeInfo);
+        for (Car car : vehicles) {
+            double rangeInfo = car.vehicleRange();
+            System.out.printf("Zasięg pojazdu %s %.2fkm\n", car.getName(), rangeInfo);
         }
     }
 
     public void turnOnAc() {
-        for (Vehicle vehicle : vehicles) {
-            vehicle.setAcIsOn(true);
+        for (Car car : vehicles) {
+            car.acTurnOn();
         }
     }
 }
