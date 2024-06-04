@@ -4,16 +4,15 @@ public class Main {
 
     public static void main(String[] args) {
         VehicleWarehouse vehicleWarehouse = new VehicleWarehouse();
-        vehicleWarehouse.vehicleInfo();
-        vehicleWarehouse.achievableRange();
-        vehicleWarehouse.turnOnAc();
+        Car car1 = new Car("BMW", 50, 7,false);
+//        vehicleWarehouse.vehicleInfo();
+//        vehicleWarehouse.achievableRange();
+//        vehicleWarehouse.turnOnAc();
 
-        for (int i = 0; i < 5; i++) {
-            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        }
-
-        vehicleWarehouse.vehicleInfo();
-        System.out.println("Zasięg pojazdów po włączeniu klimatyzacji");
-        vehicleWarehouse.achievableRange();
+//        vehicleWarehouse.vehicleInfo();
+//        System.out.println("Zasięg pojazdów po włączeniu klimatyzacji");
+//        vehicleWarehouse.achievableRange();
+        double range = car1.vehicleRange();
+        System.out.printf("Zasięg %.2fkm", range);
     }
 }
